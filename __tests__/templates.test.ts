@@ -47,4 +47,9 @@ describe("renderReferralFollowupEmail", () => {
       renderReferralFollowupEmail("nope", ctx)
     ).toThrow(/Unknown template/);
   });
+
+  it("flags false positives and throws if required context data is missing", () => {
+    const badCtx = { ...ctx, user_first_name: undefined } as any;
+    expect(() => renderReferralFollowupEmail("medbuddy_referral_followup", badCtx)).toThrow();
+  });
 });

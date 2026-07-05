@@ -77,4 +77,14 @@ describe("sendReferralFollowup — context assembly (port of the snippet)", () =
     );
     expect(res.status).toBe("preview");
   });
+
+  it("flags false positives and throws if referred user data is missing", async () => {
+    const badLead = { ...lead, user: undefined } as any;
+    await expect(sendReferralFollowup(referrer, badLead)).rejects.toThrow();
+  });
+
+  it("flags false positives and throws if course data is missing", async () => {
+    const badLead = { ...lead, course: undefined } as any;
+    await expect(sendReferralFollowup(referrer, badLead)).rejects.toThrow();
+  });
 });
