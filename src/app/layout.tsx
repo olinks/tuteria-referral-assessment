@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Medbuddy Referrals",
+  title: "Referral Follow-up — Tuteria Case Study",
   description: "Referral follow-up flow — Tuteria case study",
 };
 
