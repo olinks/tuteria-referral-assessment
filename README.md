@@ -1,4 +1,4 @@
-# Medbuddy Referral Follow-up — Tuteria Case Study
+# Tuteria Referral Follow-up — Case Study
 
 A **Next.js + Supabase (BaaS) + Resend** implementation of the referral
 follow-up email flow described in the case study, with a **GitHub Actions**
